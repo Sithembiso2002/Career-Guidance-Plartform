@@ -26,14 +26,17 @@ const institutionPublicRoutes = require('./routes/institutionPublicRoutes');
 const app = express();
 
 // ================================
-// FIXED CORS CONFIGURATION
+// UPDATED CORS CONFIGURATION WITH YOUR VERCEL DOMAIN
 // ================================
 const allowedOrigins = [
   'http://localhost:3000',
   'http://localhost:5173',
   'http://localhost:5000',
-  'https://career-guidance-frontend.vercel.app', // Add your Vercel URL here
-  'https://career-guidance-frontend-git-*.vercel.app', // For preview deployments
+  'https://career-guidance-frontend.vercel.app',
+  'https://career-guidance-frontend-git-*.vercel.app',
+  'https://career-guidance-new.vercel.app',      // ADDED: Your actual Vercel domain
+  'https://career-guidanceapp.vercel.app',       // ADDED: Your other Vercel domain
+  'https://career-guidance-*.vercel.app'         // ADDED: Wildcard for all your Vercel deployments
 ];
 
 app.use(cors({
@@ -222,4 +225,3 @@ async function startServer() {
 }
 
 startServer();
-
