@@ -41,7 +41,7 @@ const Application = sequelize.define('Application', {
     allowNull: false
   },
   highest_qualification: {
-    type: DataTypes.ENUM('JC', 'IGCSE/LGCSE', 'A-Level'),
+    type: DataTypes.ENUM('Matric', 'IGCSE/LGCSE', 'A-Level'),
     allowNull: false
   },
   final_results_file: {
@@ -72,7 +72,7 @@ const Application = sequelize.define('Application', {
     type: DataTypes.STRING(100),
     allowNull: true
   },
-  institution_id: {
+  institute_id: {
     type: DataTypes.INTEGER,
     allowNull: false
   },
